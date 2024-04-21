@@ -5,10 +5,10 @@ import { useForm } from 'react-hook-form';
 import { zodResolver } from "@hookform/resolvers/zod";
 
 const formSchema = z.object({
- name: z.string().min(2).max(50),
+ name: z.string().min(2,"name must be at least 2 caracters").max(50,"name must be 50 caracters max"),
  email: z.string().email(),
- phoneNumber: z.string().min(10).max(10),
- message: z.string().min(5),
+ phoneNumber: z.string().min(10,"phone number must be 10 caracters"),
+ message: z.string().min(5,"message must be at least 5 caracters"),
 });
 
 const ProfileForm = () => {
