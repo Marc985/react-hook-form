@@ -3,7 +3,8 @@ import React from 'react';
 import { z } from "zod";
 import { useForm } from 'react-hook-form';
 import { zodResolver } from "@hookform/resolvers/zod";
-
+//modification
+//modif2
 const formSchema = z.object({
  name: z.string().min(2,"name must be at least 2 caracters").max(50,"name must be 50 caracters max"),
  email: z.string().email(),
